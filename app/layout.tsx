@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import { Poppins } from 'next/font/google';
 import "./globals.css";
 
-const roboto = Roboto({
-  variable: "--font-roboto",
-  weight: ["400", "600", "800"],
+const poppins = Poppins({
+  weight: ["400", "500", "600", "800"],
   subsets: ["latin"],
+  variable: "--font-roboto"
 });
 
 export const metadata: Metadata = {
   title: "Orbitly",
-  description: "Animated Landing Page",
+  description: "Launch your startup to the stars",
 };
 
 export default function RootLayout({
@@ -19,11 +19,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="[&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-background [&::-webkit-scrollbar-thumb]:bg-background">
       <body
-        className={`${roboto.className} antialiased`}
-      >c
-        {children}
+        className={`${poppins.className}`}
+      >
+          {children}
       </body>
     </html>
   );

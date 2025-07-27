@@ -37,44 +37,18 @@ const Testimonials = () => {
     }
   ]
 
-  const slideLeft = {
-    animate: {
-      x: ["0%", "-100%", "100%"],
-      transition: {
-        x: {
-          duration: 12,
-          ease: "linear",
-          repeat: Infinity
-        }
-      }
-    }
-  };
-
-  const slideRight = {
-    animate: {
-      x: ["0%", "100%", "-100%"],
-      transition: {
-        x: {
-          duration: 12,
-          ease: "linear",
-          repeat: Infinity
-        }
-      }
-    }
-  };
-
   return (
     <motion.div id="testimonials" className="flex flex-col items-center justify-center">
         <SectionHeading>Testimonials</SectionHeading>
         <div className="grid grid-rows-2 gap-4 w-[80%]">
-          {/* Top row shifted left */}
+          
           <motion.div className="grid grid-cols-3 gap-4" initial={{ x: -30 }}>
             {items.slice(0, 3).map((item, index) => (
               <TestimonialCard key={index} {...item} />
             ))}
           </motion.div>
 
-          {/* Bottom row shifted right */}
+          
           <motion.div className="grid grid-cols-3 gap-4" initial={{ x: 30 }}>
             {items.slice(3, 6).map((item, index) => (
               <TestimonialCard key={index + 3} {...item} />

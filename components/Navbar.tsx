@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import { motion } from 'motion/react';
 import Button from "./ui/Button";
-import { itemVariants } from "@/app/page";
 
 const Navbar = () => {
     const navItems = [
@@ -12,7 +11,6 @@ const Navbar = () => {
         { name: 'Testimonials', id: 'testimonials' },
         { name: 'Pricing', id: 'pricing' },
         { name: 'FAQ', id: 'faq' },
-        { name: 'Contact', id: 'contact' },
     ];
 
     const [activeSection, setActiveSection] = useState<string>('home');
@@ -42,8 +40,7 @@ const Navbar = () => {
         
     return (
         <motion.nav 
-            variants={itemVariants}
-            className="fixed top-0 bg-background z-1 flex items-center justify-center gap-[80px] py-[16px] w-full">
+            className="fixed top-0 bg-background/60 z-1 flex items-center justify-center gap-[80px] py-[16px] w-full">
             <motion.h1 whileHover={{scale: 1.02}} transition={{ duration:0.3 }} className="font-bold text-3xl cursor-pointer">Orbitly</motion.h1>
             <ul className="flex gap-[20px]">
                 {navItems.map((item) => (

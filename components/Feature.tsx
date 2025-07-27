@@ -1,10 +1,10 @@
 "use client"
 
-import { itemVariants } from "@/app/page"
 import { motion } from "motion/react"
 import SectionHeading from "./ui/SectionHeading"
 import FeatureCard from "./ui/FeatureCard"
 import { IconDashboard, IconSettingsAutomation, IconTemplate, IconTool } from "@tabler/icons-react"
+import SectionWrapper from "./SectionWrapper"
 
 const Feature = () => {
     const features = [
@@ -31,18 +31,18 @@ const Feature = () => {
     ]
 
   return (
-    <motion.div
+    <div
         id="features"
-        variants={itemVariants}
         className="w-full h-fit flex flex-col justify-center items-center"
     >
         <SectionHeading>Features</SectionHeading>
+
         <div className="grid grid-cols-2 grid-rows-2 gap-4 w-[80%]">
             {features.map((feature, index) => {
                 return <FeatureCard key={index} title={feature.title} description={feature.description} icon={feature.icon}/>
             })}
         </div>
-    </motion.div>
+    </div>
   )
 }
 export default Feature

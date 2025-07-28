@@ -1,28 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #0B0F1A;
-  --color-surface: #151A28;
-  --color-border: #2B2F3A;
-
-  --color-primary: #4CC9F0;
-  --color-secondary: #F72585;
-  --color-highlight: #7209B7;
-
-  --color-text-primary: #EDEDED;
-  --color-text-muted: #9A9A9A;
-
-  --color-success: #3BE8B0;
-  --color-warning: #FFA552;
+  --color-text-primary: #FAFAFA;
+  --color-text-muted: #A1A1AA ;
+  --color-background: #09090B;
+  --color-highlight: #A78BFA;
 }
 
-#bg-container {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: url('/planet.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom;
-  opacity: 0.2;
-}

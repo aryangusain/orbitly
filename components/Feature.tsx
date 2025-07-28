@@ -8,36 +8,56 @@ import SectionWrapper from "./SectionWrapper"
 
 const Feature = () => {
     const features = [
-        {
-            title: "Custom Landing Pages",
-            description: "Design and launch beautifully responsive landing pages without writing a single line of code. Our drag-and-drop builder helps you convert visitors into loyal customers.",
-            icon: <IconSettingsAutomation className="size-6 text-highlight"/>,
-        },
-        {
-            title: "Branding Tools",
-            description: "From logos to typography and color palettes, Orbitly equips you with everything you need to establish a consistent and memorable brand identity that stands out in a crowded market.",
-            icon: <IconTool className="size-6 text-highlight"/>,
-        },
-        {
-            title: "Analytics Dashboard",
-            description: "Gain valuable insights with our real-time dashboard. Track page visits, conversion rates, traffic sources, and user behavior—all from a single clean and interactive interface.",
-            icon: <IconDashboard className="size-6 text-highlight"/>,
-        },
-        {
-            title: "Templates & AI Assistant",
-            description: "Kickstart your journey with a library of stunning prebuilt templates, or let our AI assistant guide you with smart suggestions tailored to your brand, goals, and audience.",
-            icon: <IconTemplate className="size-6 text-highlight"/>,
-        },
-    ]
+  {
+    title: "Custom Landing Pages",
+    description: "Create landing pages easily with our drag-and-drop builder.",
+    icon: <IconSettingsAutomation className="size-6 text-text-primary" />,
+  },
+  {
+    title: "Branding Tools",
+    description: "Build your brand with logos, fonts, and color palettes.",
+    icon: <IconTool className="size-6 text-text-primary" />,
+  },
+  {
+    title: "Analytics Dashboard",
+    description: "Monitor traffic and performance in real-time dashboards.",
+    icon: <IconDashboard className="size-6 text-text-primary" />,
+  },
+  {
+    title: "Templates & AI Assistant",
+    description: "Start quickly with templates or AI-driven suggestions.",
+    icon: <IconTemplate className="size-6 text-text-primary" />,
+  },
+  {
+    title: "SEO Optimization",
+    description: "Improve search visibility with built-in SEO tools.",
+    icon: <IconSettingsAutomation className="size-6 text-text-primary" />,
+  },
+  {
+    title: "Responsive Design",
+    description: "Pages look great on desktop, tablet, and mobile.",
+    icon: <IconTool className="size-6 text-text-primary" />,
+  },
+  {
+    title: "Team Collaboration",
+    description: "Work together in real time with shared editing tools.",
+    icon: <IconDashboard className="size-6 text-text-primary" />,
+  },
+  {
+    title: "Custom Domains",
+    description: "Use your own domain to boost brand trust.",
+    icon: <IconTemplate className="size-6 text-text-primary" />,
+  },
+];
 
   return (
     <div
         id="features"
-        className="w-full h-fit flex flex-col justify-center items-center"
+        className="w-full h-fit flex flex-col justify-center items-center mt-[100px]"
     >
-        <SectionHeading>Features</SectionHeading>
+        <SectionHeading>Everything You Need</SectionHeading>
 
-        <div className="grid grid-cols-2 grid-rows-2 gap-4 w-[80%]">
+        <div className="grid grid-cols-4 grid-rows-2 gap-x-10 gap-y-12 w-fit px-[100px] mb-[60px]">
             {features.map((feature, index) => {
                 return <FeatureCard key={index} title={feature.title} description={feature.description} icon={feature.icon}/>
             })}

@@ -12,15 +12,15 @@ import Partition from "@/components/ui/Partition";
 import { motion } from "motion/react";
 
 export const blurVariants = {
-  visible: { filter: "blur(0px)", transition: { duration: 0.2 } },
-  blurred: { filter: "blur(10px)", transition: { duration: 0.2 } },
+  visible: { filter: "blur(0px)", opacity: 1, transition: { duration: 0.2 } },
+  blurred: { filter: "blur(10px)", opacity: 0.3, transition: { duration: 0.2 } },
 };
 
 export default function Home() {
 
   return (
    <motion.div 
-      className="flex flex-col items-center h-full min-h-screen bg-background text-text-primary "> 
+      className="flex flex-col gap-[40px] items-center h-full min-h-screen  bg-background text-text-primary overflow-x-hidden"> 
       <Navbar />
       <div className="flex flex-col items-center gap-[60px] w-full">
         

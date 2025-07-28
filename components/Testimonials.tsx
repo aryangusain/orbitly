@@ -38,7 +38,7 @@ const Testimonials = () => {
   ]
 
   return (
-    <motion.div id="testimonials" className="flex flex-col items-center justify-center">
+    <div id="testimonials" className="flex flex-col items-center justify-center my-[40px]">
         <SectionHeading>Testimonials</SectionHeading>
         <div className="grid grid-rows-2 gap-4 w-[80%]">
           
@@ -55,7 +55,7 @@ const Testimonials = () => {
             ))}
           </motion.div>
         </div>
-    </motion.div>
+    </div>
   )
 }
 export default Testimonials

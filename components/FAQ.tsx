@@ -1,6 +1,7 @@
 import { useState } from "react";
 import FAQCard from "./ui/FAQCard";
 import SectionHeading from "./ui/SectionHeading";
+import SectionWrapper from "./SectionWrapper";
 
 const FAQ = () => {
   const faqs = [
@@ -33,9 +34,10 @@ const FAQ = () => {
   };
 
   return (
-    <div id="faq" className="flex flex-col items-center">
+    <div id="faq" className="flex flex-col items-center my-[60px]">
       <SectionHeading>FAQs</SectionHeading>
-      <div className="flex flex-col gap-0 border-1 border-highlight rounded-lg overflow-hidden w-[50rem]">
+      <SectionWrapper>
+      <div className="flex flex-col gap-0 rounded-lg overflow-hidden w-[50rem]">
         {faqs.map((faq, index) => (
           <FAQCard
             key={index}
@@ -46,6 +48,7 @@ const FAQ = () => {
           />
         ))}
       </div>
+      </SectionWrapper>
     </div>
   );
 };

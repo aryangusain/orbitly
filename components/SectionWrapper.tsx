@@ -1,20 +1,25 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
+import { motion, useMotionValueEvent, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { blurVariants } from "@/app/page";
 import { cn } from "@/lib/utils";
 
 const SectionWrapper = ({ children, className }: { children: React.ReactNode, className?: string }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, {margin: "-100px 0px -60px 0px"});
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"]
+  });
+
+  const transformOpacity = useTransform(scrollYProgress, [0, 0.5, 1], [0.2, 1.5, 0.3])
 
   return (
     <motion.div
       ref={ref}
-      variants={blurVariants}
-      initial="blurred"
-      animate={isInView ? "visible" : "blurred"}
+      style={{
+        opacity: transformOpacity
+      }}
       className={cn("w-full", className)}
     >
       {children}
